@@ -17,7 +17,7 @@ const Button = styled(TouchableOpacity)(
 );
 
 Button.defaultProps = {
-  activeOpacity: 0.9,
+  activeOpacity: 0.8,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",

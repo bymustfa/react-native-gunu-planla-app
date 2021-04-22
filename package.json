@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "svgr": "svgr ./icons -d ./src/components/icons --native --icon --svg-props \"width=24,height=24,className=\""
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -13,6 +14,7 @@
     "@react-navigation/stack": "^5.14.4",
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
+    "moment": "^2.29.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
@@ -20,12 +22,14 @@
     "react-native-reanimated": "^2.1.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.1.1",
+    "react-native-svg": "^12.1.1",
     "react-native-web": "~0.13.12",
     "styled-components": "^5.2.3",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "@babel/core": "^7.9.0",
+    "@svgr/cli": "^5.5.0"
   },
   "private": true
 }

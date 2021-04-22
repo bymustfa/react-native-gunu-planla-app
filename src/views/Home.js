@@ -1,14 +1,27 @@
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native";
-import { Box, Text } from "../components";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+
+import moment from "moment";
+import "moment/min/locales";
+moment.locale("tr");
+
+import { Box, Text, HeaderLight, HeadDate, Timeline } from "../components";
+import theme from "../utils/theme";
 
 export default function HomeView() {
+  const { colors } = theme;
+  const [selectedDate, setSelectedDate] = useState(
+    moment().format("YYYY-MM-DD")
+  );
+  console.log(selectedDate);
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Box flex={1} bg="white" justifyContent="center" alignItems="center">
+      <Box flex={1} bg="white" px={3} py={4}>
         <StatusBar style="auto" />
-        <Text fontSize={32}>Deneme</Text>
+        <HeaderLight text="Günü Planla" subtitle="Bugün 4 adet görev var" />
+        <HeadDate selected={selectedDate} setSelectedDate={setSelectedDate} />
+        <Timeline selectedDate={selectedDate} />
       </Box>
     </SafeAreaView>
   );
