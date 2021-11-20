@@ -2,20 +2,21 @@ import React from "react";
 
 import Box from "./box";
 import Text from "./text";
-
+import Button from "./button";
 import theme from "../utils/theme";
 import { Clock } from "./icons";
 
 export default function TimelineItem({ text, time }) {
   const { colors } = theme;
   return (
-    <Box
+    <Button
       px={22}
       py={18}
       mt={4}
       bg={colors.black}
       borderRadius={15}
       flexDirection="column"
+      alignItems="flex-start"
     >
       <Text fontSize={18} color={colors.white} fontWeight="bold">
         Design Tasks Detail
@@ -26,6 +27,6 @@ export default function TimelineItem({ text, time }) {
           08:30 - 09:30
         </Text>
       </Box>
-    </Box>
+    </Button>
   );
 }

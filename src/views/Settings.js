@@ -9,19 +9,13 @@ moment.locale("tr");
 import { Box, Text, HeaderLight, HeadDate, Timeline } from "../components";
 import theme from "../utils/theme";
 
-export default function HomeView() {
+export default function SettingsView() {
   const { colors } = theme;
-  const [selectedDate, setSelectedDate] = useState(
-    moment().format("YYYY-MM-DD")
-  );
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Box flex={1} bg="white" px={3} py={4}>
-        <StatusBar style="auto" />
-        <HeaderLight text="Günü Planla" subtitle="Bugün 4 adet görev var" />
-        <HeadDate selected={selectedDate} setSelectedDate={setSelectedDate} />
-        <Timeline selectedDate={selectedDate} />
+        <Text>Setitngs</Text>
       </Box>
     </SafeAreaView>
   );

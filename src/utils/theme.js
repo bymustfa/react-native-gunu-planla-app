@@ -5,6 +5,7 @@ const theme = {
     white: "#FFFFFF",
     gray: "#717477",
     lightGray: "#F5F5F5",
+    lightGray2: "#C4C4C4",
   },
 };
 
